@@ -5,10 +5,10 @@ canvas.addEventListener("mousedown", plopImg, false);
 
 // Setting Up Audio
 var sound = new Howl({
-  urls: ['audio/leafy.mp3']
+  urls: ['audio/jeff-quick.wav']
 });
 var altSound = new Howl({
-  urls: ['audio/leafy.mp3']
+  urls: ['audio/jeff-bass.wav']
 });
 
 
@@ -20,7 +20,7 @@ var altSound = new Howl({
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 ,context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/bg.jpg';
+		bgObj.src = 'img/mynamajeff.png';
 });
 	
 $(document).ready(function(){
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 , context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/bg.jpg';
+		bgObj.src = 'img/mynamajeff.png';
 
 });
 	
@@ -45,12 +45,12 @@ function plopImg(event)
   imageObj.onload = function() {
     context.drawImage(imageObj, x - 143, y - 198);
   };
- if ((Math.floor((Math.random() * 15) + 1)) == 15){
-	imageObj.src = 'img/leafyisqueer.png';
+ if ((Math.floor((Math.random() * 5) + 1)) == 5){
+	imageObj.src = 'img/jeff-distort.png';
 	altSound.play();
  } else {
 	//You Clever Dan
-	imageObj.src = 'img/holyshit.png';
+	imageObj.src = 'img/jeff.jpg';
 	sound.play();
  }
 
