@@ -5,10 +5,10 @@ canvas.addEventListener("mousedown", plopImg, false);
 
 // Setting Up Audio
 var sound = new Howl({
-  urls: ['audio/jeff-quick.wav']
+  urls: ['audio/and_we_will_win.mp3']
 });
 var altSound = new Howl({
-  urls: ['audio/jeff-bass.wav']
+  urls: ['audio/tired_of_winning.mp3']
 });
 
 
@@ -20,7 +20,7 @@ var altSound = new Howl({
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 ,context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/mynamajeff.png';
+		bgObj.src = 'img/trump-bg.jpg';
 });
 	
 $(document).ready(function(){
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 , context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/mynamajeff.png';
+		bgObj.src = 'img/trump-bg.jpg';
 
 });
 	
@@ -46,11 +46,11 @@ function plopImg(event)
     context.drawImage(imageObj, x - 143, y - 198);
   };
  if ((Math.floor((Math.random() * 5) + 1)) == 5){
-	imageObj.src = 'img/jeff-distort.png';
+	imageObj.src = 'img/tromp.jpg';
 	altSound.play();
  } else {
 	//You Clever Dan
-	imageObj.src = 'img/jeff.jpg';
+	imageObj.src = 'img/trump.jpg';
 	sound.play();
  }
 
