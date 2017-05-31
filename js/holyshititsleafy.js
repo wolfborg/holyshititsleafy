@@ -5,10 +5,13 @@ canvas.addEventListener("mousedown", plopImg, false);
 
 // Setting Up Audio
 var sound = new Howl({
-  urls: ['audio/and_we_will_win.mp3']
+  urls: ['audio/zucc3.wav']
 });
 var altSound = new Howl({
-  urls: ['audio/tired_of_winning.mp3']
+  urls: ['audio/zucc1.wav']
+});
+var altSound2 = new Howl({
+  urls: ['audio/zucc2.wav']
 });
 
 
@@ -20,7 +23,7 @@ var altSound = new Howl({
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 ,context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/trump-bg.jpg';
+		bgObj.src = 'img/zucc-bg.jpg';
 });
 	
 $(document).ready(function(){
@@ -30,7 +33,7 @@ $(document).ready(function(){
 		bgObj.onload = function(){
 			context.drawImage( bgObj, 0, 0 , context.canvas.width ,  context.canvas.height);
 		};
-		bgObj.src = 'img/trump-bg.jpg';
+		bgObj.src = 'img/zucc-bg.jpg';
 
 });
 	
@@ -46,11 +49,15 @@ function plopImg(event)
     context.drawImage(imageObj, x - 143, y - 198);
   };
  if ((Math.floor((Math.random() * 5) + 1)) == 5){
-	imageObj.src = 'img/tromp.jpg';
-	altSound.play();
+	if ((Math.floor((Math.random() * 2) + 1)) == 2){
+		imageObj.src = 'img/zucc3.jpg';
+		altSound2.play();
+	} else {
+		imageObj.src = 'img/zucc2.jpeg';
+		altSound.play();
+	}
  } else {
-	//You Clever Dan
-	imageObj.src = 'img/trump.jpg';
+	imageObj.src = 'img/zucc1.png';
 	sound.play();
  }
 
